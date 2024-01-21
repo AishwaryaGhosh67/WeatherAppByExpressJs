@@ -8,7 +8,6 @@ const datahide = document.querySelector('.middle_layer');
 
 const getInfo = async(event) => {
     event.preventDefault();
-    // let url = `https://api.openweathermap.org/data/2.5/weather?q=patna&units=metric&appid=c3d710f3c1beff4c05168f486a4efecf`;
     let cityVal = cityName.value;
     console.log(cityVal);
     if(cityVal === ''){
@@ -16,7 +15,7 @@ const getInfo = async(event) => {
         datahide.classList.add('data_hide');
     }else{
         try{
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=c3d710f3c1beff4c05168f486a4efecf`
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=${key}`
             const response = await fetch(url);
             // console.log(response);
             const data = await response.json();

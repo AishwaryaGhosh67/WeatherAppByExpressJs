@@ -1,2 +1,3 @@
 # git ignore this file directly
 node_modules
+config.properties
